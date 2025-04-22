@@ -128,5 +128,11 @@ def get_thresholding2_image():
     print(f"Fetching thresholding2 image from {image_path}")
     return send_file(image_path, mimetype='image/jpeg')
 
+@app.route('/image/logo')
+def get_logo():
+    image_path = os.path.join("logo", "logo.png")
+    print(f"Fetching LOGO image from {image_path}")
+    return send_file(image_path, mimetype='image/png')
+
 if __name__ == '__main__':
     app.run()
